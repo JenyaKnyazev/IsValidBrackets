@@ -241,6 +241,15 @@ namespace ConsoleApplication1
             Console.WriteLine("((() = " + isValidBrackets("((()"));
             Console.WriteLine("([])[][({]}) = " + isValidBrackets("([])[][({]})"));
             Console.WriteLine("[(][)] = " + isValidBrackets("[(][)]"));
+            Console.WriteLine("(()()) = " + isValidBrackets("(()())"));
+            string abc = "";
+            while (true) {
+                Console.WriteLine("Enter bracets or exit to exit");
+                abc = Console.ReadLine();
+                if (abc.Equals("exit"))
+                    break;
+                Console.WriteLine(abc+" = " + isValidBrackets(abc)+"\n");
+            }
             Console.ReadLine();
         }
     }
